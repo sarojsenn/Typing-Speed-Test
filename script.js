@@ -41,7 +41,7 @@ async function getSampleText() {
         const data = await res.json();
         currentSample = data[0].quote;
     } catch {
-        currentSample = "The quick brown fox jumps over the lazy dog.";
+        currentSample = " ";
     }
     highlightSample();
     typingInput.value = '';
