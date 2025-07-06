@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Speed Test</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors">
-    <div class="max-w-5xl mx-auto p-12 mt-16 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl">
-        <div class="flex justify-between items-center mb-12">
-            <h1 class="text-7xl font-extrabold font-serif text-yellow-600 px-30">Typing Speed Test</h1>
-        </div>
 
-        <!-- Sample Text -->
-        <div id="sampleText" class="mb-8 p-6 bg-gray-100 dark:bg-gray-700 rounded-xl text-3xl select-none leading-relaxed">
-            The quick brown fox jumps over the lazy dog.
-        </div>
-
-        <!-- Typing Input -->
-        <textarea id="typingInput" rows="4" class="w-full p-6 rounded-xl border-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-4 focus:ring-blue-400 dark:bg-gray-900 dark:text-white text-3xl transition-colors" placeholder="Start typing here..." autofocus></textarea>
-
-        <!-- Stats -->
-        <div class="flex justify-between items-center mt-8 text-4xl font-semibold font-serif text-yellow-600">
-            <div>
-                <span>Time:</span>
-                <span id="timer" class="text-3xl font-bold">60</span> s
-            </div>
-            <div>
-                <span>WPM:</span>
-                <span id="wpm" class="text-3xl font-bold">0</span>
-            </div>
-            <div>
-                <span>Accuracy:</span>
-                <span id="accuracy" class="text-3xl font-bold">100</span>%
-            </div>
-        </div>
-
-        <!-- Restart Button -->
-        <div class="flex justify-end mt-10">
-            <button id="restartBtn" class="px-8 py-4 bg-yellow-600 text-4xl font-bold text-black rounded-xl hover:bg-yellow-800 transition-colors font-serif">Restart</button>
-        </div>
+  <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-12 mt-8 sm:mt-12 bg-white dark:bg-gray-800 rounded-2xl shadow-xl">
+    
+    <!-- Title -->
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-8 sm:mb-12">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-serif text-yellow-600 text-center sm:text-left">
+        Typing Speed Test
+      </h1>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Sample Text -->
+    <div id="sampleText" class="mb-6 sm:mb-8 p-4 sm:p-6 bg-gray-100 dark:bg-gray-700 rounded-xl text-xl sm:text-2xl md:text-3xl select-none leading-relaxed">
+      The quick brown fox jumps over the lazy dog.
+    </div>
+
+    <!-- Typing Input -->
+    <textarea
+      id="typingInput"
+      rows="5"
+      class="w-full p-4 sm:p-6 rounded-xl border-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-4 focus:ring-blue-400 dark:bg-gray-900 dark:text-white text-xl sm:text-2xl md:text-3xl transition-colors"
+      placeholder="Start typing here..."
+      autofocus
+    ></textarea>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 sm:mt-8 text-2xl sm:text-3xl md:text-4xl font-semibold font-serif text-yellow-600 text-center">
+      <div>
+        <span>Time:</span>
+        <span id="timer" class="font-bold">60</span> s
+      </div>
+      <div>
+        <span>WPM:</span>
+        <span id="wpm" class="font-bold">0</span>
+      </div>
+      <div>
+        <span>Accuracy:</span>
+        <span id="accuracy" class="font-bold">100</span>%
+      </div>
+    </div>
+
+    <!-- Restart Button -->
+    <div class="flex justify-center sm:justify-end mt-8">
+      <button
+        id="restartBtn"
+        class="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-yellow-600 text-2xl sm:text-3xl md:text-4xl font-bold text-black rounded-xl hover:bg-yellow-800 transition-colors font-serif"
+      >
+        Restart
+      </button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
